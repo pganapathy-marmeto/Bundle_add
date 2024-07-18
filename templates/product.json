@@ -27,6 +27,11 @@
             "swatch_shape": "circle"
           }
         },
+        "addon_8eRbGW": {
+          "type": "addon",
+          "settings": {
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -49,19 +54,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "custom_liquid_tz9NrJ": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<span>metafields data:<\/span>\n{{ product.metafields.custom.special_color_variant }}"
-          }
-        },
-        "text_GqaNCX": {
-          "type": "text",
-          "settings": {
-            "text": "Text block",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
@@ -69,12 +61,11 @@
         "title",
         "price",
         "variant_picker",
+        "addon_8eRbGW",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "custom_liquid_tz9NrJ",
-        "text_GqaNCX"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
