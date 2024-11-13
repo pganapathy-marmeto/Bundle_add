@@ -50,6 +50,7 @@ if (!customElements.get('product-form')) {
 
          variantIds.forEach((item,index) => {
              formData.append(`items[${index}][id]`, item.id);
+           console.log(`items[${index}][id]`)
              formData.append(`items[${index}][quantity]`, item.quantity);
              Object.keys(item.properties).forEach((key) => {
               formData.append(
