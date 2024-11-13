@@ -44,6 +44,7 @@ if (!customElements.get('product-form')) {
                 }
              });
          });
+        console.log(variantIds)
 
      
 
