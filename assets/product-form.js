@@ -56,6 +56,7 @@ if (!customElements.get('product-form')) {
                 item.properties[key]
               );
             })
+           console.log(`items[${index}][properties][${key}]`)
          });
 
         if (this.cart) {
