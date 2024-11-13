@@ -55,8 +55,8 @@ if (!customElements.get('product-form')) {
                 `items[${index}][properties][${key}]`,
                 item.properties[key]
               );
-            })
            console.log(`items[${index}][properties][${key}]`)
+            })
          });
 
         if (this.cart) {
