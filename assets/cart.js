@@ -261,6 +261,7 @@ removeBundle.addEventListener("click",async function (){
   const filtered = response.items.filter((item)=>{
     return item.properties._isAddon
   })
+  console.log(filtered)
   let updates = {}
   filtered.map(item=>{
     updates[item.variant_id]=0
