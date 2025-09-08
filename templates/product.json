@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -12,13 +21,11 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -27,15 +34,9 @@
             "swatch_shape": "circle"
           }
         },
-        "addon_8eRbGW": {
-          "type": "addon",
-          "settings": {
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -46,8 +47,7 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "share": {
           "type": "share",
@@ -61,7 +61,6 @@
         "title",
         "price",
         "variant_picker",
-        "addon_8eRbGW",
         "quantity_selector",
         "buy_buttons",
         "description",
@@ -100,58 +99,10 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "image_with_text_XzbYHU": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_LWNQ4d": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ product.metafields.custom.meta_object.value.heading.value }}",
-            "heading_size": "h1"
-          }
-        },
-        "text_rnME9q": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ product.metafields.custom.meta_object.value.sub_heading | metafield_tag }}<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_CraArR": {
-          "type": "button",
-          "settings": {
-            "button_label": "{{ product.metafields.custom.meta_object.value.button.value }}",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_LWNQ4d",
-        "text_rnME9q",
-        "button_CraArR"
-      ],
-      "settings": {
-        "image": "{{ product.metafields.custom.meta_object.value.image.value }}",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "image_with_text_XzbYHU"
+    "related-products"
   ]
 }

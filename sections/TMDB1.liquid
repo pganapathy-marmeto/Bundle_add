@@ -1,0 +1,25 @@
+{{ 'section-tmdb1.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-tmdb1.js' | asset_url }}" defer></script>
+
+
+<div class="Section--wrapper">
+  My Assignment for week 3
+</div>
+{% schema %}
+  {
+    "name": "TMDB1",
+    "tag":"section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"text",
+        "label": "Section Heading"
+      }
+    ],
+    "presets": [
+      {
+      "name":"TMDB1"
+      }
+    ]
+  }
+{% endschema %}

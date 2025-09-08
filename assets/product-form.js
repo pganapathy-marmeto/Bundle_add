@@ -31,35 +31,6 @@ if (!customElements.get('product-form')) {
         delete config.headers['Content-Type'];
 
         const formData = new FormData(this.form);
-
-
-         let variantIds = [];
-         document.querySelectorAll(".addon-checkbox:checked").forEach((checkbox) => {
-             const variantId = checkbox.dataset.addonId;
-             variantIds.push({
-                 id: variantId,
-                 quantity: 1,	
-                 properties: {
-                  _isAddon: true
-                }
-             });
-         });
-        console.log(variantIds)
-
-     
-
-         variantIds.forEach((item,index) => {
-             formData.append(`items[${index}][id]`, item.id);
-           console.log(`items[${index}][id]`)
-             formData.append(`items[${index}][quantity]`, item.quantity);
-             Object.keys(item.properties).forEach((key) => {
-              formData.append(
-                `items[${index}][properties][${key}]`,
-                item.properties[key]
-              );
-            })
-         });
-
         if (this.cart) {
           formData.append(
             'sections',
@@ -69,7 +40,7 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        
+
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {

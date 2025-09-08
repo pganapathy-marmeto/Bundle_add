@@ -224,9 +224,3 @@ cart-items {
     gap: 1rem;
   }
 }
-
-
-/* removing the bundle button if cart is emptt */
-cart-items.is-empty #removeBundle{
-  display: none;
-}

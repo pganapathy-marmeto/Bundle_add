@@ -1,29 +1,55 @@
-{{ 'assignment.css' | asset_url | stylesheet_tag }}
-{% style %}
-  .carousel-with-text-contanier{
-    font-family: 'Sofia Sans';
-    font-weight:700;
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-left:{{section.settings.padding_leff | times:0.75 | round : 0}}px;
+    padding-right:{{section.settings.padding_right | times:0.75 | round:0}}px;
+     font-family: 'Sofia sans';
   }
-{% endstyle %}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-left:{{section.settings.padding_left}}px;
+      padding-right:{{section.settings.padding_right}}px;
+    }
+  }
+{%- endstyle -%}
+<div id="carousel-with-text-container--{{ section.id }}" class="carousel-with-text-container section-{{ section.id }}-padding" >
 
 
-<div id="carousel-with-text-container--{{ section.id }}" class="carousel-with-text-contanier">
+  <!-- Reading Content from Section settings -->
+
+  {{ section.settings.section_heading }}
+  
+  <!-- Reading Content from Blocks settings -->
   {% for block in section.blocks %}
+
     {{ block.settings.block_heading }}
     {{ block.settings.block_sub_heading }}
+    {{ block.settings.block_description }}
+    
   {% endfor %}
+  
 </div>
-<script src={{ "assignment.js" | asset_url}} defer />
 
 {% schema %}
-  {
+ {
   "name": "Carousel with text",
   "tag": "section",
-  "class": "carousel-with-text",
+  "class": "carousel-with-text another-test-class",
   "settings": [
+
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading"
+    },
+    
     {
       "type": "header",
-      "content": "desktop"
+      "content": "Padding customisation"
     },
     {
       "type": "range",
@@ -32,9 +58,30 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
       "default": 36
     },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_left",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_right",
+      "default": 36
+    },
+    
     {
       "type": "range",
       "id": "padding_bottom",
@@ -42,7 +89,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
   ],
@@ -60,37 +107,36 @@
         {
           "type": "richtext",
           "id": "block_sub_heading",
-          "label": "Sub Heading",
-          "default": "<p>Gold Luxury, Choose Us<p/>"
+          "label": "Sub heading"
         },
         {
           "type": "richtext",
           "id": "block_description",
           "label": "Description",
-          "default": "<p>Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch<p/>"
+          "default": "<p>Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch</p>"
         },
         {
           "type": "text",
           "id": "block_price",
           "label": "Price",
-          "default": "499"
+          "default": "$499.00"
         },
         {
           "type": "checkbox",
-          "id": "show_social_media_icons",
-          "label": "Show Social Media icons",
+          "id": "show_social_icons",
+          "label": "Show social icons",
           "default": true
         },
         {
           "type": "image_picker",
           "id": "block_image",
           "label": "Image",
-          "info": "Recommended 500x620"
+          "info": "Recommended Size: 500 X 600"
         }
       ]
     }
   ],
-  "presets": [
+    "presets": [
     {
       "name": "Carousel with text",
       "blocks": [

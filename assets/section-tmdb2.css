@@ -1,0 +1,149 @@
+.Section--wrapper{
+
+}
+.parent{
+  width:100%;
+}
+.input-div{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+.filter-input{
+  width:505px;
+  padding:6px 10px;
+  border:2px solid #B91C1C;
+  border-radius:6px;
+  margin:6px 0px;
+}
+.section-heading{
+  font-weight:700;
+  font-size:36px;
+  color:#000000;
+}
+  .splide__slide {
+    padding: 10px;
+  }
+  .splide__pagination {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .splide__pagination__page {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .splide__pagination__page.is-active {
+    background: #333;
+  }
+  .Section--wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .input-div {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .filter-input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+  }
+.splide__slide img {
+  width: 250px;
+  height: 370px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover the specified height */
+  border-radius: 10px;
+}
+.photographer-para{
+  color:#9CA3AF;
+  font-size:12px;
+  font-weight:700;
+}
+.photo-details{
+  color:#111827;
+  font-size:18px;
+  font-weight:700;
+}
+.main-img{
+  display:flex;
+  align-items:center;
+  margin-bottom:42px;
+}
+.first-image-info{
+  margin-left:32px;
+}
+.img-alt{
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:0;
+}
+.pg-name{
+  font-weight:400;
+  font-size:12px;
+  color:#B91C1C;
+  margin-top:0;
+}
+.explore-btn{
+  width:137px;
+  height:36px;
+  padding:6px 16px;
+  border-radius:6px;
+   border:1px solid #BE123C;
+   background-color:#BE123C;
+  font-size:14px;
+  font-weight:700;
+  color:#FFFFFF;
+}
+.image-card {
+  position: relative;
+}
+
+.heart-icon {
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.heart-div{
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  width:30px;
+  height:29.21px;
+   background-color:#F3F4F680;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:16px;
+  padding:8px;
+}
+.heart-icon.favorite {
+  color: red;
+}
+/* Custom styles for the slider arrows */
+.splide__arrow {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  background-color: rgba(255, 255, 255, 0.8); /* Background color */
+  border: none;
+  border-radius: 50%; /* Make it circular */
+  color: #333; /* Arrow color */
+  font-size: 24px; /* Font size of the arrow */
+  line-height: 50px; /* Center the arrow vertically */
+  text-align: center; /* Center the arrow horizontally */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Styles for the arrow hover state */
+.splide__arrow:hover {
+  background-color: #333; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}

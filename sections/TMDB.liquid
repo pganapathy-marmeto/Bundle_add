@@ -1,0 +1,30 @@
+{% comment %}
+  How to inject your custom files in to section
+  1. JS
+  2. CSS
+  3. Snippet (HTML)
+{% endcomment %}
+{{ 'section-tmdb.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-tmdb.js' | asset_url }}" defer></script>
+<div class="page-width Section-tmdb-wrapper">
+  My Assignment for Week 3
+  {% render 'icon' %}
+</div>
+{% schema %}
+{
+  "name": "TMDB",
+  "tag": "section",
+  "settings": [
+    {
+     "type": "text",
+      "id": "text",
+      "label": "Section Heading"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TMDB"
+    }
+  ]
+}
+{% endschema %}

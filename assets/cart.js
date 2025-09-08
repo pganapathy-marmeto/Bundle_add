@@ -109,8 +109,6 @@ class CartItems extends HTMLElement {
   }
 
   updateQuantity(line, quantity, name, variantId) {
-    console.log(this)
-
     this.enableLoading(line);
 
     const body = JSON.stringify({
@@ -251,38 +249,3 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
-
-
-//Remove bundle
-const removeBundle = document.getElementById('removeBundle')
-removeBundle.addEventListener("click",async function (){
-  const data = await fetch("/cart.js")
-  const response = await data.json()
-  const filtered = response.items.filter((item)=>{
-    return item.properties._isAddon
-  })
-  console.log(filtered)
-  let updates = {}
-  filtered.map(item=>{
-    updates[item.variant_id]=0
-  })
-  console.log(updates)
-  await fetch(window.Shopify.routes.root + 'cart/update.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ updates })
-  })
-   fetch("/cart?section_id=main-cart-items")
-        .then((response) => response.text())
-        .then((responseText) => {
-          const html = new DOMParser().parseFromString(responseText, 'text/html');
-          const sourceQty = html.querySelector('cart-items');
-          const main_cart = document.getElementById("main_cart")
-          main_cart.innerHTML = sourceQty.innerHTML;
-        })
-        .catch((e) => {
-          console.error(e);
-        })
-})

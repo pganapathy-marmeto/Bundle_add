@@ -1,0 +1,54 @@
+{{ 'section-tmdb2.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+
+<script src="{{ 'section-tmdb2.js' | asset_url }}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" defer></script>
+
+<div class="Section--wrapper">
+  <div class='parent'>
+    <div class='input-div'>
+      <input type='text' class='filter-input' placeholder='Search...' id='search-input'>
+    </div>
+  </div>
+
+  <div id="first-image-section"></div>
+  
+  <div class="section-heading">Similar Results</div>
+  <div id="image-slider" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list" id="image-list">
+        <!-- Images will be inserted here -->
+      </ul>
+    </div>
+  </div>
+
+  <div id="favorite-list-section" style="display: none;">
+    <h2 class='section-heading'>Favorite List</h2>
+    <div id="favorite-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list" id="favorite-list">
+          <!-- Favorite items will be inserted here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "TMDB2",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Section Heading"
+      }
+    ],
+    "presets": [
+      {
+        "name": "TMDB2"
+      }
+    ]
+  }
+{% endschema %}

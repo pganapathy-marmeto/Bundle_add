@@ -1,0 +1,80 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_8jCdHK": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_PLV7aU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stock photos",
+            "heading_size": "h1"
+          }
+        },
+        "text_N3WpV3": {
+          "type": "text",
+          "settings": {
+            "text": "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
+            "text_style": "body"
+          }
+        },
+        "buttons_WG4EjT": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PLV7aU",
+        "text_N3WpV3",
+        "buttons_WG4EjT"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/wp4643327-john-wick-3-parabellum-wallpapers_1.jpg",
+        "image_overlay_opacity": 60,
+        "image_height": "adapt",
+        "desktop_content_position": "top-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "tmdb2_RatFH9": {
+      "type": "TMDB2",
+      "settings": {
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_8jCdHK",
+    "tmdb2_RatFH9"
+  ]
+}
