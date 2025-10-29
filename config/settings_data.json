@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/Registered_Logo_PNG-02_4435x_1.png",
+    "logo": "shopify://shop_images/Registered_Logo_PNG-02_4435x_1.png",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -107,7 +107,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -141,9 +141,17 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
+    "blocks": {
+      "10557767768680663964": {
+        "type": "shopify://apps/recurpay-subscriptions-app/blocks/recurpay-widget/c600a513-dad8-4030-8697-de47c18881f2",
+        "disabled": false,
+        "settings": {
+          "multiply_price_with_quantity": false,
+          "show_price_in_frequency_dropdown": true
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -358,7 +366,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
